@@ -7,7 +7,6 @@ module.exports = function () {
   function sbgnvizInstanceUtilities (options) {
 
     instance = libs.sbgnviz(options);
-    instance.style().selector('node:selected').style('');
 
     return instance;
   }
