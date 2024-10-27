@@ -775,9 +775,8 @@ module.exports = function () {
         firstTime: true
       };
 
-      cy.undoRedo().do("changeNodeLabel", param);
+      cy.undoRedo().do("changeNodeLabel", param);    
     }
-
     cy.style().update();
   };
 

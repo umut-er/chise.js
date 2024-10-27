@@ -564,6 +564,19 @@ module.exports = function () {
       return result;
     };
 
+    undoRedoActionFunctions.regenerateId=function(param){  
+      var nodes = param.nodes;
+      var result={};
+      result.nodes=nodes;
+      result.id = {};
+      for(let i=0;i<nodes.length;i++){
+        var node = nodes[i];
+        result.id[node.id()] = node._private.data.id;
+        node._private.data.id = param.value;
+      }
+      return result;
+    };
+
     undoRedoActionFunctions.changeData = function (param) {
       var result = {
       };
