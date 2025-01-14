@@ -234,8 +234,6 @@ module.exports = function () {
         }
       }
 
-      console.log(data);
-
       var sourceNode = cy.getElementById(source); // The original source node
       var targetNode = cy.getElementById(target); // The original target node
       var sourceHasPorts = sourceNode.data("ports").length === 2;
